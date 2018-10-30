@@ -1,9 +1,16 @@
+
 #include <iostream>
 using namespace std;
 
-
+	struct Treenode {
+			int key;
+			Treenode* left;
+			Treenode* right;
+			Treenode* parent;
+			}*root;
 class bst{
 	private:
+		/*
 		struct Treenode {
 			int key;
 			Treenode* left;
@@ -14,15 +21,19 @@ class bst{
 
 		Treenode* root;
 
+*/
+
 	public:
 
-		void insertroot(Treenode *, int key);
-		void search();
-		void minimum();
+		bst();
+		~bst();
+		Treenode insert(Treenode*,int);
+		Treenode search(Treenode*,int );
+		Treenode minimum(Treenode*);
 		void maximum();
 		void successor();
-		void inorder(Treenode *root);
+		void inorder(Treenode *);
 		void remove();
-		void print();
-		int newnode(int);
+		Treenode remove(Treenode*,int);
+		void print(Treenode*, int);
 	};
